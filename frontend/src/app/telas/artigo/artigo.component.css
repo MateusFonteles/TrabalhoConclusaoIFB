@@ -1,0 +1,22 @@
+
+p{
+    text-align: justify;
+    margin: auto;
+}
+
+button{
+    width: 15%;
+}
+
+.mat-card{
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1{
+    margin: auto;
+}
+.conteudo{
+    margin: auto;
+    width: 90%;
+}

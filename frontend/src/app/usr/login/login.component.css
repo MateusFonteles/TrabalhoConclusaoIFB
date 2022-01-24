@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 15px;
+}
+
+.cadastro-forgot{
+    align-self: center;
+}
+
+.cadastro-forgot a{
+    text-decoration: none;
+    font-size: medium;
+    margin: 15px;
+}
+
+.conteudo{
+    margin: auto;
+}
+
+button{
+    width: 15%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom:15px ;
+}
