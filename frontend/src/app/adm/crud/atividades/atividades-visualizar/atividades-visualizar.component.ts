@@ -19,6 +19,10 @@ export class AtividadesVisualizarComponent implements OnInit {
     this.atividadeService.read().subscribe(atividades => {
       this.atividades = atividades
     })
+    this.readFile(this.atividades)
   }
-
+  readFile(atividades){
+    const fileReader = new FileReader();
+  fileReader.readAsDataURL(atividades.imagem);
+}
 }

@@ -79,6 +79,7 @@ export class AtividadesCriarComponent implements OnInit {
   convertToBase64(file:File){
     const observable = new Observable((subscriber: Subscriber<any>) => {
       this.readFile(file, subscriber);
+      this.atividade.imagem = this.base64
     });
     observable.subscribe(
       (d) => {
