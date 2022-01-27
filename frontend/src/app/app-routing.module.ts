@@ -33,6 +33,7 @@ import { ArtigosCrudComponent } from './adm/artigos-crud/artigos-crud.component'
 import { UsuariosCrudComponent } from './adm/usuarios-crud/usuarios-crud.component';
 import { CategoriasCrudComponent } from './adm/categorias-crud/categorias-crud.component';
 import { ArtigosComponent } from './telas/artigos/artigos.component';
+import { DropzoneComponent } from './dropzone/dropzone/dropzone.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -66,7 +67,8 @@ const routes: Routes = [
   { path: 'usuario-modificar-senha/:id', component: UsuariosModificarSenhaComponent},
   { path: 'usuario/:id', component: PerfilComponent},
   {path: 'upload-file', component: UploadFileComponent},
-  { path: 'base64', component: Base64Component}
+  { path: 'base64', component: Base64Component},
+  { path: 'dropzone', component: DropzoneComponent}
 
 ];
 

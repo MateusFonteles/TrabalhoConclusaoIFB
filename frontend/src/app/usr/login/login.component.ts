@@ -20,7 +20,4 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/home'])
     this.usuarioService.showMessage('Login realizado com sucesso! ')
   }
-
-
-
 }

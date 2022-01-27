@@ -34,3 +34,7 @@ ul.breadcrumb {
     color: #01447e;
     text-decoration: underline;
   }
+
+  p{
+    font-size: large;
+  }

@@ -60,9 +60,11 @@
 
       <div class="cadastro-login">
         <button mat-raised-button (click)="logar()" color="primary">Entrar</button>
-        <button mat-raised-button routerLink="/usuario-cadastro" color="accent">Cadastre-se</button>
       </div>
-          <p>Esqueceu a senha? <a mat-raised-button color="accent" class="button-forgot-password" mat-button routerLink="/usuario-recuperar-senha">Recuperar senha</a></p>
+      <div class="cadastro-recuperar">
+        <p> <a class="button-forgot-password" routerLink="/usuario-cadastro">Cadastre-se</a></p>
+        <p> <a  class="button-forgot-password" routerLink="/usuario-recuperar-senha">Esqueci a senha</a></p>
+      </div>
     </form>
     
     

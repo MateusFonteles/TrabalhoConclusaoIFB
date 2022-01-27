@@ -74,6 +74,27 @@ import { UploadFileComponent } from './dummies/upload-file/upload-file.component
 import { Base64Component } from './dummies/base64/base64.component';
 import { CompAComponent } from './dummies/siblingcomponents/comp-a/comp-a.component';
 import { CompBComponent } from './dummies/siblingcomponents/comp-b/comp-b.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
+import { provideMessaging,getMessaging } from '@angular/fire/messaging';
+import { providePerformance,getPerformance } from '@angular/fire/performance';
+import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { DropzoneComponent } from './dropzone/dropzone/dropzone.component';
+import { UploadManagerComponent } from './dropzone/upload-manager/upload-manager.component';
+import { UploadTaskComponent } from './dropzone/upload-task/upload-task.component';
+import { DropzoneDirective } from './dropzone/dropzone.directive';
+
+import { AngularFireModule} from '@angular/fire/compat'
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule} from '@angular/fire/compat/storage';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -116,7 +137,11 @@ import { CompBComponent } from './dummies/siblingcomponents/comp-b/comp-b.compon
     UploadFileComponent,
     Base64Component,
     CompAComponent,
-    CompBComponent
+    CompBComponent,
+    DropzoneComponent,
+    UploadManagerComponent,
+    UploadTaskComponent,
+    DropzoneDirective
   ],
   imports: [
     BrowserModule,
@@ -144,11 +169,25 @@ import { CompBComponent } from './dummies/siblingcomponents/comp-b/comp-b.compon
     FormsModule,
     MatExpansionModule,
     MatSidenavModule,
-    NgxPaginationModule
-
+    NgxPaginationModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
+    provideFunctions(() => getFunctions()),
+    provideMessaging(() => getMessaging()),
+    providePerformance(() => getPerformance()),
+    provideRemoteConfig(() => getRemoteConfig()),
+    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [
     AtividadesComponent,
+    ScreenTrackingService,UserTrackingService,
 
   ],
   bootstrap: [AppComponent]

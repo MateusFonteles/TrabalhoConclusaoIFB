@@ -1,7 +1,7 @@
 
 p{
-    text-align: justify;
-    margin: auto;
+    margin-bottom: 15px;
+
 }
 
 button{
@@ -9,7 +9,6 @@ button{
 }
 
 .mat-card{
-    text-align: center;
     margin-top: 50px;
 }
 

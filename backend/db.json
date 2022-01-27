@@ -1,46 +1,12 @@
 {
   "postagens": [
     {
-      "titulo": "Educando os pais1 ",
-      "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "texto": "Lorem Ipsum is simply dummy text of the printLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. ing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "titulo": "Educação especial e inclusiva",
+      "texto": "Educação inclusiva vem sendo tema de estudos e pesquisas cientificas, que estudam as teorias e os modelos de diretrizes instituídas à prática pedagógica no âmbito educacional.  A Educação Especial na perspectiva de uma educação inclusiva está associada a ideia de uma educação para todos e no respeito a peculiaridade de cada indivíduo, com o intuito de possibilitar a integração e a interação dos educandos no contexto educacional.  A Lei de Diretrizes e Bases da Educação Nacional, Lei nº 9. 394 / 96, no artigo 58, destaca que, entende-se por educação especial, para os efeitos desta Lei, a modalidade de educação escolar, oferecida preferencialmente na rede regular de ensino, para educandos portadores de necessidades especiais.",
       "autor": "Madalena Borges",
-      "id": 9
-    },
-    {
-      "titulo": "Ensino do braile para estudantes com deficiência visual",
-      "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "texto": "Lorem Ipsum is simply dummy text of the printLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. ing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "autor": "Madalena Borges",
-      "id": 10
-    },
-    {
-      "titulo": "123456",
-      "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "texto": "Lorem Ipsum is simply dummy text of the printing and typesetting indLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. ustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "autor": "Madalena Borges",
-      "id": 11
-    },
-    {
-      "titulo": "Os desafios da educação inclusiva",
-      "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "texto": "Lorem Ipsum is simply dummyLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "autor": "Madalena Borges",
-      "id": 12
-    },
-    {
-      "titulo": "Educando os pais",
-      "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "texto": "Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "autor": "Madalena Borges",
-      "id": 13
-    },
-    {
-      "titulo": "Ensino do braile para estudantes com deficiência visual",
-      "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "texto": "Lorem Ipsum is simplLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. y dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "autor": "Madalena Borges",
-      "id": 14
+      "descricao": "O presente estudo tem como objetivo ratificar a importância da educação especial na perspectiva da educação inclusiva no contexto educacional. Este trabalho visa refletir sobre a educação especial e inclusiva no Brasil, de modo a reconhecer o significado de educação inclusiva e compreender os princípios da inclusão, considerando a necessidade de se analisar as metodologias aplicadas, perante os novos paradigmas e a legislação vigente.",
+      "data": "27/01/2022 11:01:38",
+      "id": 15
     }
   ],
   "usuarios": [
@@ -522,6 +488,13 @@
       "descricao": "",
       "autor": "",
       "data": "27/01/2022 07:53:08"
+    },
+    {
+      "id": 29,
+      "titulo": "",
+      "descricao": "",
+      "autor": "",
+      "data": "27/01/2022 11:37:50"
     }
   ],
   "series": [
