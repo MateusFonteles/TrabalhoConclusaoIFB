@@ -27,12 +27,12 @@ export class UsuariosExcluirComponent implements OnInit {
   excluirUsuario() {
     this.usuarioService.delete(this.usuario.id).subscribe(() => {
       this.usuarioService.showMessage('Usuario excuído com sucesso')
-      this.router.navigate(['/adm/usuarios'])
+      this.router.navigate(['/adm-usuarios'])
     })
   }
 
   cancelar(): void {
-    this.router.navigate(['/adm/usuarios'])
+    this.router.navigate(['/adm-usuarios'])
   }
 
 }

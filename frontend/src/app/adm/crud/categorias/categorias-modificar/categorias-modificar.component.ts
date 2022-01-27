@@ -26,12 +26,12 @@ export class CategoriasModificarComponent implements OnInit {
  modificarCategoria(): void {
     this.categoriaService.update(this.categoria).subscribe(() => {
       this.categoriaService.showMessage('categoria atualizada com sucesso!')
-      this.router.navigate(["/adm/categorias"]);
+      this.router.navigate(["/adm-categorias"]);
     });
   }
 
   cancelar(): void {
-    this.router.navigate(['/adm/categorias']);
+    this.router.navigate(['/adm-categorias']);
   }
 
 }

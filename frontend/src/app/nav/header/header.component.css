@@ -50,3 +50,8 @@ mat-toolbar{
 .titulo {
     margin-right: 15px;
 }
+
+mat-button-focus-overlay{
+    color: aqua;
+    background-color: red;
+}

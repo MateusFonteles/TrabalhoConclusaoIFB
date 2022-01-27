@@ -1,3 +1,4 @@
+import { HeaderService } from 'src/app/services/header.service';
 // Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 registerLocaleData(localePt);
+import {NgxPaginationModule} from 'ngx-pagination';
 
 //Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -68,10 +70,10 @@ import { ArtigosCrudComponent } from './adm/artigos-crud/artigos-crud.component'
 import { UsuariosCrudComponent } from './adm/usuarios-crud/usuarios-crud.component';
 import { CategoriasCrudComponent } from './adm/categorias-crud/categorias-crud.component';
 import { ArtigosComponent } from './telas/artigos/artigos.component';
-import { TesteComponent } from './teste/teste.component';
-import { TesteMostrarComponent } from './teste/teste/teste-mostrar.component';
-import { UploadFileComponent } from './upload-file/upload-file.component';
-import { Base64Component } from './base64/base64.component';
+import { UploadFileComponent } from './dummies/upload-file/upload-file.component';
+import { Base64Component } from './dummies/base64/base64.component';
+import { CompAComponent } from './dummies/siblingcomponents/comp-a/comp-a.component';
+import { CompBComponent } from './dummies/siblingcomponents/comp-b/comp-b.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -111,10 +113,10 @@ import { Base64Component } from './base64/base64.component';
     UsuariosCrudComponent,
     CategoriasCrudComponent,
     ArtigosComponent,
-    TesteComponent,
-    TesteMostrarComponent,
     UploadFileComponent,
-    Base64Component
+    Base64Component,
+    CompAComponent,
+    CompBComponent
   ],
   imports: [
     BrowserModule,
@@ -142,10 +144,12 @@ import { Base64Component } from './base64/base64.component';
     FormsModule,
     MatExpansionModule,
     MatSidenavModule,
+    NgxPaginationModule
 
   ],
   providers: [
-    AtividadesComponent
+    AtividadesComponent,
+
   ],
   bootstrap: [AppComponent]
 })

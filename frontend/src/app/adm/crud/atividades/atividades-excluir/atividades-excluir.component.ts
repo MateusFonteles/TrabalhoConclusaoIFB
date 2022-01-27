@@ -27,12 +27,12 @@ export class AtividadesExcluirComponent implements OnInit {
   deletarAtividade() {
     this.atividadeService.delete(this.atividade.id).subscribe(() => {
       this.atividadeService.showMessage('Atividade excuída com sucesso')
-      this.router.navigate(['adm/atividades']);
+      this.router.navigate(['adm-atividades']);
     })
   }
 
   cancelar(): void {
-    this.router.navigate(['adm/atividades']);
+    this.router.navigate(['adm-atividades']);
   }
 
 }

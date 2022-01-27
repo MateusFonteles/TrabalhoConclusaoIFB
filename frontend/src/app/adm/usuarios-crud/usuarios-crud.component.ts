@@ -14,7 +14,7 @@ export class UsuariosCrudComponent implements OnInit {
   }
 
   navigateToPainel(): void {
-    this.router.navigate(['/adm/'])
+    this.router.navigate(['/adm'])
   }
 
 }

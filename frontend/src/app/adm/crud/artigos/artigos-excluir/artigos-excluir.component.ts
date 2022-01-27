@@ -29,12 +29,12 @@ export class ArtigosExcluirComponent implements OnInit {
   excluirArtigo() {
     this.artigoService.delete(this.artigo.id).subscribe(() => {
       this.artigoService.showMessage('Artigo excuído com sucesso')
-      this.router.navigate(['/adm/artigos'])
+      this.router.navigate(['/adm-artigos'])
     })
   }
 
   cancelar(): void {
-    this.router.navigate(['/adm/artigos'])
+    this.router.navigate(['/adm-artigos'])
   }
 
 }

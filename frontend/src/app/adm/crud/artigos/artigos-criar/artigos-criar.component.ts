@@ -30,12 +30,12 @@ export class ArtigosCriarComponent implements OnInit {
    criarArtigo(): void{
      this.artigoService.create(this.artigo).subscribe(() => {
        this.artigoService.showMessage('Artigo criado!')
-       this.router.navigate(['/adm/artigos'])
+       this.router.navigate(['/adm-artigos'])
      })
      }
    
    cancelar(): void{
-     this.router.navigate(['/adm/artigos'])
+     this.router.navigate(['/adm-artigos'])
    }
    
  }

@@ -63,7 +63,7 @@ export class AtividadesCriarComponent implements OnInit {
      this.atividade.imagem = this.imagem
      this.atividadeService.create(this.atividade).subscribe(() => {
        this.atividadeService.showMessage('Postagem criada!')
-       this.router.navigate(['/adm/atividades'])
+       this.router.navigate(['/adm-atividades'])
      })
      }
    
@@ -104,7 +104,7 @@ export class AtividadesCriarComponent implements OnInit {
       subscriber.error(error);
       subscriber.complete();
     }
-      
+    
     }
    
  }

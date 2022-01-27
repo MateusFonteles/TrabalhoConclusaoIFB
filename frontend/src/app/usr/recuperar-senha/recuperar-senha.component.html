@@ -3,32 +3,24 @@
   
     <ul class="breadcrumb">
           <li><a href="/home">Início</a></li>
-          <li><a href="/usuario/recuperar-senha">Recuperar senha</a></li>
+          <li><a href="/usuario-recuperar-senha">Recuperar senha</a></li>
 
         </ul>
         
   
         <h1>Recuperação de Senha</h1>
-        <h3>Informe seu email para recuperar a senha</h3>
+
         <form>
 
-        <mat-form-field class="full-width" appearance="fill">
-          <mat-label>E-mail</mat-label>
-          <input >
-
+          <mat-form-field>
+            <input matInput placeholder="Informe seu e-mail"
+             name="nome" > 
         </mat-form-field>
-      
-        <h3>Ou informe seu CPF</h3>
-
-        <mat-form-field class="full-width" appearance="fill">
-          <mat-label>E-mail</mat-label>
-          <input >
-
-        </mat-form-field>
-
-          <button (click)="recuperar()"  mat-flat-button color="primary">Recuperar Senha</button>
     
+        <button (click)="recuperar()"  mat-raised-button color="primary">Recuperar Senha</button>
       </form>
+      
 
+    
     </section>
   

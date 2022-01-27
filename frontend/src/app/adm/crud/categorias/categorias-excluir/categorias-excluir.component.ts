@@ -28,12 +28,12 @@ export class CategoriasExcluirComponent implements OnInit {
   excluirCategoria() {
     this.categoriaService.delete(this.categoria.id).subscribe(() => {
       this.categoriaService.showMessage('Categoria excuída com sucesso')
-      this.router.navigate(['/adm/categorias'])
+      this.router.navigate(['/adm-categorias'])
     })
   }
 
   cancelar(): void {
-    this.router.navigate(['/adm/categorias'])
+    this.router.navigate(['/adm-categorias'])
   }
 
 }

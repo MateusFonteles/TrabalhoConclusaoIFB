@@ -1,3 +1,5 @@
+import { AtividadeService } from 'src/app/services/atividade.service';
+import { UsuarioService } from './../../services/usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 
@@ -9,13 +11,14 @@ import { Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router ) { }
+  constructor(private router: Router, private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
   }
 
   logar(){
-
+    this.router.navigate(['/home'])
+    this.usuarioService.showMessage('Login realizado com sucesso! ')
   }
 
 

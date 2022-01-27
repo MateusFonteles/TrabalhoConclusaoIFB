@@ -11,7 +11,7 @@ import { AtividadeService } from 'src/app/services/atividade.service';
 export class AtividadesVisualizarComponent implements OnInit {
 
   atividades: Atividade[]
-  displayedColumns = ['id', 'imagem', 'titulo', 'materia', 'serie', 'descricao', 'data', 'action']
+  displayedColumns = ['id', 'titulo', 'materia', 'serie', 'descricao', 'data', 'action']
 
   constructor(private atividadeService: AtividadeService) { }
 
@@ -19,10 +19,6 @@ export class AtividadesVisualizarComponent implements OnInit {
     this.atividadeService.read().subscribe(atividades => {
       this.atividades = atividades
     })
-    this.readFile(this.atividades)
   }
-  readFile(atividades){
-    const fileReader = new FileReader();
-  fileReader.readAsDataURL(atividades.imagem);
-}
+
 }

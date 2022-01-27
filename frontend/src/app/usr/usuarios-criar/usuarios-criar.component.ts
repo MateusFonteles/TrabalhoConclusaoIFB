@@ -15,7 +15,6 @@ export class UsuariosCriarComponent implements OnInit {
   usuario: Usuario = {
     nome: '',
     email: '',
-    cpf: '',
     senha:'',
     data: this.dataPub,
   }

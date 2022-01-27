@@ -13,7 +13,7 @@ export class ArtigosCrudComponent implements OnInit {
   ngOnInit(): void {
   }
   navigateToCriarArtigo(): void {
-    this.router.navigate(['/adm/artigos/criar'])
+    this.router.navigate(['/adm-criar-artigo'])
   }
   navigateToPainel(): void {
     this.router.navigate(['/adm'])

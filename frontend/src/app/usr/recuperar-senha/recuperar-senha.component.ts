@@ -16,7 +16,7 @@ export class RecuperarSenhaComponent implements OnInit {
 
   recuperar(){
     this.usuarioService.showMessage('Te enviamos um email com uma senha provisória!')
-    this.router.navigate(['/usuario/login'])
+    this.router.navigate(['/usuario-login'])
   } 
 }
 

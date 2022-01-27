@@ -10,6 +10,8 @@ import { ArtigoService } from 'src/app/services/artigo.service';
 export class ArtigosComponent implements OnInit {
 
   artigos: Artigo[]
+  totalLenght: any;
+  page:number=1;
 
   constructor(
     private artigosService: ArtigoService) { }
@@ -17,6 +19,8 @@ export class ArtigosComponent implements OnInit {
   ngOnInit(): void {
     this.artigosService.read().subscribe(artigos => {
       this.artigos = artigos
+      this.totalLenght = artigos.length
+      console.log(artigos.length)
     })
   }
 }

@@ -51,14 +51,14 @@ export class AtividadesModificarComponent implements OnInit {
     this.atividade.materia = this.materiaSelecionada
     this.atividadeService.update(this.atividade).subscribe(() => {
       this.atividadeService.showMessage('Atividade atualizada com sucesso!')
-      this.router.navigate(['adm/atividades']);
+      this.router.navigate(['adm-atividades']);
     })
 
   }
 
   
   cancelar(): void {
-    this.router.navigate(['adm/atividades']);
+    this.router.navigate(['adm-atividades']);
   }
 
 }

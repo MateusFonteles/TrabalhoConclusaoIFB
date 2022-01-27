@@ -14,7 +14,7 @@ export class AtividadesCrudComponent implements OnInit {
   }
 
   navigateToAtividadeCreate(): void {
-    this.router.navigate(['/adm/atividades/criar'])
+    this.router.navigate(['/adm-criar-atividade'])
   }
   
   navigateToPainel(): void {

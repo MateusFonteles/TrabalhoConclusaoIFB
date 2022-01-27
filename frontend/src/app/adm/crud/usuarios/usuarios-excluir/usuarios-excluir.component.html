@@ -4,8 +4,8 @@
     <ul class="breadcrumb">
           <li><a href="/home">Início</a></li>
           <li><a href="/adm">Administração</a></li>
-          <li><a href="/adm/usuarios">Usuarios</a></li>
-          <li><a routerLink="/adm/usuarios/excluir">Excluir {{usuario.nome}}</a></li>
+          <li><a href="/adm-usuarios">Usuarios</a></li>
+          <li><a routerLink="/adm-excluir-usuario">Excluir {{usuario.nome}}</a></li>
         </ul>
 
 <mat-card>
@@ -16,11 +16,6 @@
         <mat-form-field>
             <input matInput placeholder="Nome do usuario"
                 [value] ="usuario.nome" name="nome" disabled> 
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="CPF do usuario"
-            [value] ="usuario.cpf" name="cpf" disabled>
         </mat-form-field>
 
         <mat-form-field>

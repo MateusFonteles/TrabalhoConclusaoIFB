@@ -34,3 +34,17 @@
   a{
     text-decoration: none;
   }
+
+  .atividades-cards{
+    height: 280px;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+
+  .mat-card-image{
+ height: 250px;
+   width: 180px;
+    padding: 15px;
+    margin-right: 40px;
+
+  }

@@ -14,7 +14,7 @@ export class CategoriasCrudComponent implements OnInit {
   }
   
   navigateToCriarCategoria(): void {
-    this.router.navigate(['/adm/categorias/criar'])
+    this.router.navigate(['/adm-criar-categoria'])
   }
   
   navigateToPainel(): void {

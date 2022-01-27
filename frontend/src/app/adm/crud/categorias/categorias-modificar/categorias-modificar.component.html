@@ -4,13 +4,13 @@
     <ul class="breadcrumb">
           <li><a href="/home">Início</a></li>
           <li><a href="/adm">Administração</a></li>
-          <li><a href="/adm/categorias">Categorias</a></li>
-          <li><a routerLink="/adm/categorias/modificar">Modificar {{categoria.nome}}</a></li>
+          <li><a href="/adm-categorias">Categorias</a></li>
+          <li><a routerLink="/adm-modificar-categoria">Modificar {{categoria.nome}}</a></li>
         </ul>
 
 <mat-card>
 
-    <mat-card-title>Modificar Categoria</mat-card-title>
+    <mat-card-title>Modificar Categoria {{categoria.id}}</mat-card-title>
 
     <form>
         <mat-form-field>

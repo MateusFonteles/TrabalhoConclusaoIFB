@@ -29,14 +29,14 @@ export class UsuariosModificarSenhaComponent implements OnInit {
   modificarSenha(): void {
     this.usuarioService.update(this.usuario).subscribe(() => {
       this.usuarioService.showMessage('Senha modificada com sucesso!')
-      this.router.navigate(['usuario/{{usuario.id}}']);
+      this.router.navigate(['usuario/{{this.usuario.id}}']);
     })
 
   }
 
   
   cancelar(): void {
-    this.router.navigate(['usuario/{{usuario.id}}']);
+    this.router.navigate(['usuario/{{this.usuario.id}}']);
   }
 
 }

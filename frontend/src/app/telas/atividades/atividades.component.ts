@@ -14,6 +14,10 @@ export class AtividadesComponent implements OnInit {
   categorias: Categoria[]
   atividades: Atividade[] 
   materiaSelecionada:any = ''
+  totalLenght: any;
+  page:number;
+  atividade: Atividade
+  atividadesArray:Atividade[]
     
   constructor(
     private atividadeService : AtividadeService, 
@@ -23,15 +27,17 @@ export class AtividadesComponent implements OnInit {
     ngOnInit(): void {
       this.atividadeService.read().subscribe(atividades => {
         this.atividades = atividades
+        this.totalLenght = atividades.length
+        console.log(atividades.length)
       }),
       this.categoriaService.read().subscribe(categorias => {
         this.categorias = categorias
       })
     }
     
-  selecionarMateria(atividade:any): void {
-    this.materiaSelecionada = atividade
-  }
+  selecionarMateria(categoria:any): void {
+    this.materiaSelecionada = categoria
+   }
 
   reiniciarMateriaSelecionada(){
     this.materiaSelecionada = '';

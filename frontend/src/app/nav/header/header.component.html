@@ -19,14 +19,8 @@
             </li>
         
             <li>
-                <button mat-button [matMenuTriggerFor]="menu">Categorias</button>
-    <mat-menu #menu="matMenu">
-        <a routerLink="/atividades">
-        <mat-option *ngFor="let categoria of categorias" [value]="categoria.nome">
-          <button mat-button>  {{categoria.nome}}</button>
-                </mat-option>
-        </a>
-    </mat-menu>
+                <a routerLink="/atividades">
+                    Atividades</a>
             </li>
             <li>
                 <a routerLink="/artigos">Artigos</a>
@@ -45,6 +39,5 @@
             </li>
         </ul>
     </div>
-        <a class="login material-icons" routerLink="/usuario/login">account_circle</a>
-{{materiaSelecionada}}
+        <a class="login material-icons" routerLink="/usuario-login">account_circle</a>
   </mat-toolbar>

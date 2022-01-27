@@ -27,12 +27,12 @@ export class ArtigosModificarComponent implements OnInit {
   modificarArtigo(): void {
     this.artigoService.update(this.artigo).subscribe(() => {
       this.artigoService.showMessage('Artigo modificado com sucesso!')
-      this.router.navigate(['/adm/artigos']);
+      this.router.navigate(['/adm-artigos']);
     });
   }
 
   cancel(): void {
-    this.router.navigate(['/adm/artigos']);
+    this.router.navigate(['/adm-artigos']);
   }
 
 }

@@ -25,12 +25,12 @@ export class CategoriasCriarComponent implements OnInit {
    criarCategoria(): void{
      this.categoriaService.create(this.categoria).subscribe(() => {
        this.categoriaService.showMessage('Categoria criada!')
-       this.router.navigate(['/adm/categorias'])
+       this.router.navigate(['/adm-categorias'])
      })
      }
    
    cancelar(): void{
-     this.router.navigate(['/adm/categorias'])
+     this.router.navigate(['/adm-categorias'])
    }
    
  }

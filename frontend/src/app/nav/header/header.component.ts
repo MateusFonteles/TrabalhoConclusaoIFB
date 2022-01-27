@@ -1,7 +1,9 @@
+import { InteractionService } from './../../services/interaction.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Categoria } from 'src/app/models/categoria.model';
 import { CategoriaService } from 'src/app/services/categoria.service';
+import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'app-header',
@@ -13,26 +15,25 @@ export class HeaderComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
 
   categorias: Categoria[]
-  materiaSelecionada:any = ''
+  categoriaSelecionada:any = ''
+  messageFromCompA="Hello Angular, I am CompA";
 
-
-  constructor(private categoriaService: CategoriaService, private router: Router) { }
+  constructor(private categoriaService: CategoriaService, private router: Router, private headerService: HeaderService) { }
 
   ngOnInit(): void {
     this.categoriaService.read().subscribe(categorias => {
       this.categorias = categorias
-    })
+    }),
+    this.sendInfoToCompB()
     }
 
-    //selecionarMateria(atividade:any): void {
-    // this.materiaSelecionada = atividade.nome;
-    //this.router.navigate(['/atividades']);
-    //}
-    
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }
 
-
+  sendInfoToCompB(){
+    this.headerService.communicateMessage(this.messageFromCompA)
+  }
+  
 
 }
