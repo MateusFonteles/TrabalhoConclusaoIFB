@@ -10,20 +10,20 @@ import { Atividade } from 'src/app/models/atividade.model';
   styleUrls: ['./atividades.component.css']
 })
 export class AtividadesComponent implements OnInit {
-  
+
   categorias: Categoria[]
-  atividades: Atividade[] 
+  atividades: Atividade[]
   materiaSelecionada:any = ''
   totalLenght: any;
   page:number;
   atividade: Atividade
-  atividadesArray:Atividade[]
-    
+  atividadesArray:Object[]
+
   constructor(
-    private atividadeService : AtividadeService, 
+    private atividadeService : AtividadeService,
     private categoriaService:CategoriaService,
     ) { }
-    
+
     ngOnInit(): void {
       this.atividadeService.read().subscribe(atividades => {
         this.atividades = atividades
@@ -34,9 +34,17 @@ export class AtividadesComponent implements OnInit {
         this.categorias = categorias
       })
     }
-    
+
   selecionarMateria(categoria:any): void {
     this.materiaSelecionada = categoria
+    for (let atividade of this.atividades){
+      if(this.materiaSelecionada.id == atividade.materia.id){
+        this.atividadesArray.push(atividade)
+        console.log(this.atividadesArray)
+      }
+
+    }
+
    }
 
   reiniciarMateriaSelecionada(){
@@ -44,4 +52,3 @@ export class AtividadesComponent implements OnInit {
   }
 
 }
-  
