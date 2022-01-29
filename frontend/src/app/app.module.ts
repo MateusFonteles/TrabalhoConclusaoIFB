@@ -90,10 +90,8 @@ import { UploadManagerComponent } from './dropzone/upload-manager/upload-manager
 import { UploadTaskComponent } from './dropzone/upload-task/upload-task.component';
 import { DropzoneDirective } from './dropzone/dropzone.directive';
 
-import { AngularFireModule} from '@angular/fire/compat'
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireStorageModule} from '@angular/fire/compat/storage';
+
+import { SubirImagensComponent } from './adm/subir-imagens/subir-imagens.component';
 
 @NgModule({
   declarations: [
@@ -141,7 +139,8 @@ import { AngularFireStorageModule} from '@angular/fire/compat/storage';
     DropzoneComponent,
     UploadManagerComponent,
     UploadTaskComponent,
-    DropzoneDirective
+    DropzoneDirective,
+    SubirImagensComponent
   ],
   imports: [
     BrowserModule,
@@ -170,20 +169,6 @@ import { AngularFireStorageModule} from '@angular/fire/compat/storage';
     MatExpansionModule,
     MatSidenavModule,
     NgxPaginationModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAnalytics(() => getAnalytics()),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions()),
-    provideMessaging(() => getMessaging()),
-    providePerformance(() => getPerformance()),
-    provideRemoteConfig(() => getRemoteConfig()),
-    provideStorage(() => getStorage()),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    AngularFirestoreModule,
-    AngularFireStorageModule
   ],
   providers: [
     AtividadesComponent,

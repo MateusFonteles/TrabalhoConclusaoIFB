@@ -1,3 +1,4 @@
+import { finalize } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -19,11 +20,14 @@ export class UploadManagerComponent implements OnInit {
         this.isHovering = event;
     }
 
-    onDrop(files: FileList) {
-        for (let i = 0; i < files.length; i++) {
-            console.log('uploadManager adding file: ', files.item(i));
-            this.files.push(files.item(i));
-        }
-    }
+    onDrop($event){
+        const file=($event.target as HTMLInputElement).files[0];
+      }
+    // onDrop(files: FileList) {
+    //     for (let i = 0; i < files.length; i++) {
+    //         console.log('uploadManager adding file: ', files.item(i));
+    //         this.files.push(files.item(i));
+    //     }
+    // }
 
 }

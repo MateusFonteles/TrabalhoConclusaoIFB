@@ -1,22 +1,22 @@
-<section  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo"> 
+<section  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
 
-  
+
     <ul class="breadcrumb">
           <li><a href="/home">Início</a></li>
           <li><a href="/adm">Administração</a></li>
           <li><a href="/adm-atividades">Atividades</a></li>
           <li><a href="/adm-criar-atividade">Criar Atividade</a></li>
         </ul>
-        
-  
+
+
         <h1>Nova Atividade</h1>
           <form>
               <mat-form-field >
                 <input matInput placeholder="Título da atividade"
-                [(ngModel)] ="atividade.titulo" name="titulo" > 
+                [(ngModel)] ="atividade.titulo" name="titulo" >
               </mat-form-field>
               <mat-form-field appearance="fill">
-                  <mat-label>Matéria</mat-label>            
+                  <mat-label>Matéria</mat-label>
                   <mat-select [(value)]="materiaSelecionada">
                     <mat-option> </mat-option>
                     <mat-option *ngFor="let categoria of categorias" [value]="categoria.nome">
@@ -24,9 +24,9 @@
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
-  
+
                 <mat-form-field appearance="fill">
-                  <mat-label>Série</mat-label>            
+                  <mat-label>Série</mat-label>
                   <mat-select [(value)]="serieSelecionada">
                     <mat-option> </mat-option>
                     <mat-option *ngFor="let serie of series" [value]="serie.nome">
@@ -34,14 +34,18 @@
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
-  
+                <p>
+
+                </p>
+
               <mat-form-field>
                 <textarea matInput placeholder="Descrição da atividade"
                   [(ngModel)] ="atividade.descricao" name="descricao" ></textarea>
               </mat-form-field>
 
-              <app-dropzone></app-dropzone>
-              <!--  
+              <app-subir-imagens></app-subir-imagens>
+              olá {{UrlImagemFromSubir}}
+              <!--
 <input type="file" (change)="onChange($event)"
 [(ngModel)] ="atividade.imagem" name="imagem" >
 
@@ -70,7 +74,7 @@
               </div>
             -->
               <!--
-              <div class="upload">        
+              <div class="upload">
                 <input type="file" placeholder="Imagem da atividade"
               [(ngModel)] ="atividade.imagem" name="imagem" >
             </div>
@@ -79,16 +83,16 @@
               <input matInput placeholder="Data de publicação da atividade"
                   [(ngModel)] ="atividade.data" name="data" disabled>
               </mat-form-field>
-              
+
             </form>
-            
+
                 <button mat-raised-button (click) = "criarAtividade()" color = "primary">
                   Salvar
         </button>
-        
+
         <button mat-raised-button (click) = "cancelar()" color = "accent">
           Cancelar
         </button>
-  
-  
+
+
   </section>

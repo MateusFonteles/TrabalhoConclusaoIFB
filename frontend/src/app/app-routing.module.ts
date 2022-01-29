@@ -1,3 +1,4 @@
+import { SubirImagensComponent } from './adm/subir-imagens/subir-imagens.component';
 import { Base64Component } from './dummies/base64/base64.component';
 import { UploadFileComponent } from './dummies/upload-file/upload-file.component';
 import { NgModule } from '@angular/core';
@@ -68,7 +69,8 @@ const routes: Routes = [
   { path: 'usuario/:id', component: PerfilComponent},
   {path: 'upload-file', component: UploadFileComponent},
   { path: 'base64', component: Base64Component},
-  { path: 'dropzone', component: DropzoneComponent}
+  { path: 'dropzone', component: DropzoneComponent},
+  { path: 'subir-imagens', component: SubirImagensComponent}
 
 ];
 

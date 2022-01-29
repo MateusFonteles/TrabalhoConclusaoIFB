@@ -1,3 +1,4 @@
+import { SiblingsService } from './../../../../dummies/siblingcomponents/siblings.service';
 import { Categoria } from 'src/app/models/categoria.model';
 import { AtividadeService } from 'src/app/services/atividade.service';
 import { Component, OnInit } from '@angular/core';
@@ -20,10 +21,13 @@ export class AtividadesCriarComponent implements OnInit {
   serieSelecionada: Serie
 
   categorias: Categoria[]
-  
+
   series: Serie[]
 
+  UrlImagemFromSubir: any
+
   dataPub : string = new Date().toLocaleString()
+
  atividade: Atividade = {
   id: 0,
   titulo:'',
@@ -34,19 +38,21 @@ export class AtividadesCriarComponent implements OnInit {
   autor:'',
   data: this.dataPub
  }
- 
- base64: string = "Base64...";
-  fileSelected?: Blob;
-  imageUrl?: string;
-  imagem: Observable<any>
 
-   constructor(private atividadeService: AtividadeService, 
+//  base64: string = "Base64...";
+//   fileSelected?: Blob;
+//   imageUrl?: string;
+//   imagem: Observable<any>
+
+   constructor(
+     private atividadeService: AtividadeService,
      private router: Router,
      private categoriaService: CategoriaService,
      private serieService: SerieService,
-     private sant: DomSanitizer
+     private siblingsService: SiblingsService
+    //  private sant: DomSanitizer
      ) { }
-  
+
    ngOnInit(): void {
     this.categoriaService.read().subscribe(categorias => {
       this.categorias = categorias
@@ -54,58 +60,59 @@ export class AtividadesCriarComponent implements OnInit {
     this.serieService.read().subscribe(series => {
       this.series = series
     })
-   }
+    this.siblingsService.sendMessage.subscribe(message=>{
+      console.log(message);
+      this.UrlImagemFromSubir = message;
+    });   }
 
 
    criarAtividade(): void{
      this.atividade.serie = this.serieSelecionada
      this.atividade.materia = this.materiaSelecionada
-     this.atividade.imagem = this.imagem
+     this.atividade.imagem = this.UrlImagemFromSubir
      this.atividadeService.create(this.atividade).subscribe(() => {
        this.atividadeService.showMessage('Postagem criada!')
        this.router.navigate(['/adm-atividades'])
      })
      }
-   
+
    cancelar(): void{
      this.router.navigate(['/adm/atividades'])
    }
-   
-   onChange($event){
-    const file=($event.target as HTMLInputElement).files[0];
-    this.convertToBase64(file);
+
   }
+  //  onChange($event){
+  //   const file=($event.target as HTMLInputElement).files[0];
+  //   this.convertToBase64(file);
+  // }
 
-  convertToBase64(file:File){
-    const observable = new Observable((subscriber: Subscriber<any>) => {
-      this.readFile(file, subscriber);
-      this.atividade.imagem = this.base64
-    });
-    observable.subscribe(
-      (d) => {
-        this.imagem = d;
-            },
-            (error) => {
-              alert(error);
-            }
-    )
-  }
+  // convertToBase64(file:File){
+  //   const observable = new Observable((subscriber: Subscriber<any>) => {
+  //     this.readFile(file, subscriber);
+  //     this.atividade.imagem = this.base64
+  //   });
+  //   observable.subscribe(
+  //     (d) => {
+  //       this.imagem = d;
+  //           },
+  //           (error) => {
+  //             alert(error);
+  //           }
+  //   )
+  // }
 
-  readFile(file: File, subscriber: Subscriber<any>){
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(file);
+  // readFile(file: File, subscriber: Subscriber<any>){
+  //   const fileReader = new FileReader();
+  //   fileReader.readAsDataURL(file);
 
-    fileReader.onload=()=>{
-      subscriber.next(fileReader.result);
-      subscriber.complete();
-    };
-    
-    fileReader.onerror = (error) => {
-      subscriber.error(error);
-      subscriber.complete();
-    }
-    
-    }
-   
- }
- 
+  //   fileReader.onload=()=>{
+  //     subscriber.next(fileReader.result);
+  //     subscriber.complete();
+  //   };
+
+  //   fileReader.onerror = (error) => {
+  //     subscriber.error(error);
+  //     subscriber.complete();
+  //   }
+
+  //   }

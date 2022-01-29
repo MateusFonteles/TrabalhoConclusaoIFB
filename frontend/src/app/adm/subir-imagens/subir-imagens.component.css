@@ -1,0 +1,35 @@
+input[type="file"]{
+  display: none;
+}
+
+.labelInputFile{
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: lightblue;
+  border-radius: 100%;
+  padding:1rem;
+  box-shadow: 0 0 10px -1px gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+img {
+  margin-top: 100px;
+}
+.labelInputFile img{
+  width: 3rem;
+  height: 3rem;
+
+}
+
+.labelInputFile:active{
+  transform: scale(0.9 );
+}
+
+p{
+  margin-top: 85px;
+}

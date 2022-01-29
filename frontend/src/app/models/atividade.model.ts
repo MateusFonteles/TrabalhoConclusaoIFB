@@ -6,7 +6,7 @@ export interface Atividade {
     titulo:string
     serie: Serie
     materia: Categoria
-    imagem: any
+    imagem: string
     descricao: string
     autor: string
     data: string

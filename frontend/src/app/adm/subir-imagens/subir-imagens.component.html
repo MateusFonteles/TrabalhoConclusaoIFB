@@ -1,0 +1,18 @@
+
+  <input type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)" id="inputFile">
+<br>
+<br>
+<br>
+<label for="inputFile" class="labelInputFile">
+  <img src="https://toppng.com/uploads/preview/file-upload-image-icon-115632290507ftgixivqp.png" alt="upload file">
+</label>
+
+<img src="{{imagenUrl}}">
+{{imagenUrl}}
+
+<!-- <ngx-dropzone (change)="onSelect($event)">
+	<ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
+	<ngx-dropzone-preview *ngFor="let f of imagenes" [removable]="true" (removed)="onRemove(f)">
+		<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+	</ngx-dropzone-preview>
+</ngx-dropzone> -->

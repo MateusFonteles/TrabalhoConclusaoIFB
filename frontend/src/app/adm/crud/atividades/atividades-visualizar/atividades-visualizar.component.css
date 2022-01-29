@@ -14,10 +14,15 @@ table {
 
 .edit >i{
     color: #d9cd26;
-    
+
 }
 
 .delete >i{
     color: #e35e6b;
+}
+
+img {
+  height: 250px;
+  width: 150px;
 }
 
