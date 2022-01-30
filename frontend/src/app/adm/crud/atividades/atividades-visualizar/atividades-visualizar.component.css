@@ -22,7 +22,8 @@ table {
 }
 
 img {
-  height: 250px;
-  width: 150px;
+  height:300px;
+  width: 200px;
+  margin: 10px;
 }
 

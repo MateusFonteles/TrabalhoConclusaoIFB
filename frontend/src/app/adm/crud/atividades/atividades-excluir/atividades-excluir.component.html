@@ -1,11 +1,12 @@
-<section  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo"> 
+<div *ngIf="atividade !== null">
+<section  fxFlex="50%" fxFlex.xs="90%" fxFlex.sm="90%" class="conteudo">
 
-  
+
     <ul class="breadcrumb">
           <li><a href="/home">Início</a></li>
           <li><a href="/adm">Administração</a></li>
           <li><a href="/adm-atividades">Atividades</a></li>
-          <li><a routerLink="/adm-excluir-atividade/{{atividade.id}}">Excluir {{atividade.titulo}}</a></li>
+          <li><a routerLink="/adm-excluir-atividade/{{atividade.id}}">Excluir</a></li>
         </ul>
 
 <h1>Excluir atividade</h1>
@@ -13,32 +14,36 @@
 <form>
     <mat-form-field>
         <input matInput placeholder="Título da atividade"
-            [value] ="atividade.titulo" name="titulo" disabled > 
+            [value] ="atividade.titulo" name="titulo" disabled >
     </mat-form-field>
 
     <mat-form-field>
         <input matInput placeholder="Série da atividade"
-            [value] ="atividade.serie" name="serie" disabled > 
+            [value] ="atividade.serie" name="serie" disabled >
     </mat-form-field>
 
     <mat-form-field>
         <input matInput placeholder="Matéria da atividade"
-            [value] ="atividade.materia" name="materia" disabled > 
+            [value] ="atividade.materia" name="materia" disabled >
     </mat-form-field>
 
     <mat-form-field>
         <input matInput placeholder="Descrição da atividade"
         [value] ="atividade.descricao" name="descricao" disabled>
     </mat-form-field>
+    <img src="{{atividade.imagem}}" class="imagem">
 </form>
 
+<div class="buttons">
 
-<button mat-raised-button (click) = "deletarAtividade()" color = "primary">
-Excluir
-</button>
+  <button mat-raised-button (click) = "deletarAtividade()" color = "primary">
+    Excluir
+  </button>
 
-<button mat-raised-button (click) = "cancelar()" color = "accent">
+  <button mat-raised-button (click) = "cancelar()" color = "accent">
 Cancelar
 </button>
+</div>
 
 </section>
+</div>

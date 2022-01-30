@@ -9,11 +9,11 @@ import { AtividadeService } from 'src/app/services/atividade.service';
 })
 export class AtividadesExcluirComponent implements OnInit {
 
-  atividade: Atividade
+  atividade: Atividade = null
 
   constructor(
-    private atividadeService: AtividadeService, 
-    private router: Router, 
+    private atividadeService: AtividadeService,
+    private router: Router,
     private route: ActivatedRoute
     ) { }
 

@@ -21,30 +21,6 @@ export class SubirImagensComponent implements OnInit{
     this.sendInfoToCompB()
     }
 
-    // onSelect(event) {
-    //   console.log(event);
-    //   this.imagenes.push(...event.addedFiles);
-    //   console.log(event.target.files);
-    //   let archivos = event.target.files
-    //   let reader= new FileReader();
-    //   let nombre="Spaco_educar"
-    //   reader.readAsDataURL(archivos[0]);
-    // reader.onloadend = ()=>{
-    //   console.log(reader.result);
-    //   this.imagenes.push(reader.result);
-    //   this.subirService.subirImagen(nombre+"_"+Date.now(), reader.result).then(urlImagen=>{
-    //     console.log(urlImagen);
-    //     this.imagenUrl = urlImagen;
-    //     this.sendInfoToCompB();
-    //   })
-    // }
-    // }
-
-    // onRemove(event) {
-    //   console.log(event);
-    //   this.imagenes.splice(this.imagenes.indexOf(event), 1);
-    // }
-
   sendInfoToCompB(){
       this.siblingsService.communicateMessage(this.imagenUrl)
     }
@@ -66,4 +42,5 @@ export class SubirImagensComponent implements OnInit{
       })
     }
 
-  }}
+  }
+}

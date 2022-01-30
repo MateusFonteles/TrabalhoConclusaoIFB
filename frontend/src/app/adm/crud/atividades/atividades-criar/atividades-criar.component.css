@@ -10,8 +10,8 @@ h1{
 
 
 button {
-    margin: 15px;
-}
+width: 40%;
+margin: 10px;}
 
 .conteudo{
     margin: auto;
@@ -24,24 +24,30 @@ textarea.mat-input-element {
     height:150px;
     margin-bottom:15px}
 
-    * {
-        font-family: Lato;
+.subirImagem input[type="file"]{
+        display: none;
       }
-      
-      ngx-dropzone,
-      .custom-dropzone {
-        margin: 20px;
+
+      .mat-icon {
+        font-size: 30pt;
+        text-align: center;
       }
-      
-      .custom-dropzone {
-          height: 250px;
-          background: lightgray;
-          color: black;
-          border: 2px solid black;
-          border-radius: 5px;
-          font-size: 20px;
+
+
+      .mat-icon:active{
+        transform: scale(0.9 );
       }
-      
-      .custom-dropzone.ngx-dz-hovered {
-        border: 5px solid rgb(235, 79, 79);
+
+      .subirImagem p{
+        text-align: center;
+      }
+
+      .subirImagem{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: auto;
+        margin-top: 20px;
+        height: fit-content;
+        width: 30%;
       }

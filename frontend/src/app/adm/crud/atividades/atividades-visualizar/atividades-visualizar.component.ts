@@ -1,7 +1,10 @@
+import { MatSort, MatSortModule } from '@angular/material/sort';
 import { Observable, Subscriber } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { Atividade } from 'src/app/models/atividade.model';
 import { AtividadeService } from 'src/app/services/atividade.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-atividades-visualizar',
@@ -18,7 +21,7 @@ export class AtividadesVisualizarComponent implements OnInit {
   ngOnInit(): void {
     this.atividadeService.read().subscribe(atividades => {
       this.atividades = atividades
-    })
+    });
   }
 
 }

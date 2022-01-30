@@ -1,4 +1,3 @@
-import { HeaderService } from 'src/app/services/header.service';
 // Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -71,7 +70,6 @@ import { UsuariosCrudComponent } from './adm/usuarios-crud/usuarios-crud.compone
 import { CategoriasCrudComponent } from './adm/categorias-crud/categorias-crud.component';
 import { ArtigosComponent } from './telas/artigos/artigos.component';
 import { UploadFileComponent } from './dummies/upload-file/upload-file.component';
-import { Base64Component } from './dummies/base64/base64.component';
 import { CompAComponent } from './dummies/siblingcomponents/comp-a/comp-a.component';
 import { CompBComponent } from './dummies/siblingcomponents/comp-b/comp-b.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -133,7 +131,6 @@ import { SubirImagensComponent } from './adm/subir-imagens/subir-imagens.compone
     CategoriasCrudComponent,
     ArtigosComponent,
     UploadFileComponent,
-    Base64Component,
     CompAComponent,
     CompBComponent,
     DropzoneComponent,

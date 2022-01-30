@@ -1,62 +1,72 @@
-<section fxLayout="column" fxFlexAlign="center"  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo"> 
+<div *ngIf="atividade !== null">
+
+  <section fxLayout="column" fxFlexAlign="center"  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
     <ul class="breadcrumb">
       <li><a href="/home">Início</a></li>
       <li><a href="/adm">Administração</a></li>
       <li><a href="/adm-atividades">Atividades</a></li>
-      <li><a routerLink="/adm-modificar-atividade">Modificar {{atividade.titulo}}</a></li>
-  
+      <li><a routerLink="/adm-modificar-atividade">Modificar</a></li>
+
     </ul>
   <mat-card>
-  
+
       <mat-card-title>Modificar atividade</mat-card-title>
-  
+
       <form>
           <mat-form-field>
-              <input matInput placeholder="Título da atividade"
-                  [(ngModel)] ="atividade.titulo" name="titulo"> 
-          </mat-form-field>
-  
-      
+            <input matInput placeholder="Título da atividade"
+                  [(ngModel)] ="atividade.titulo" name="titulo">
+                </mat-form-field>
+
+
       <mat-form-field appearance="fill">
-          <mat-label>Matéria</mat-label>            
-          <mat-select [(value)]="materiaSelecionada">
+          <mat-label>Matéria</mat-label>
+          <mat-select [(ngModel)]="atividade.materia" name="categoria">
             <mat-option> </mat-option>
             <mat-option *ngFor="let categoria of categorias" [value]="categoria.nome">
               {{categoria.nome}}
             </mat-option>
           </mat-select>
         </mat-form-field>
-  
+
         <mat-form-field appearance="fill">
-          <mat-label>Série</mat-label>            
-          <mat-select [(value)]="serieSelecionada">
+          <mat-label>Série</mat-label>
+          <mat-select [(ngModel)]="atividade.serie" name="serie">
             <mat-option> </mat-option>
             <mat-option *ngFor="let serie of series" [value]="serie.nome">
               {{serie.nome}}
             </mat-option>
           </mat-select>
         </mat-form-field>
-  
-  
+
+
           <mat-form-field>
               <input matInput placeholder="Descrição da atividade"
               [(ngModel)] ="atividade.descricao" name="descricao">
           </mat-form-field>
-          
-          <mat-form-field>
-              <input matInput placeholder="Data de publicação da atividade"
-              [value] ="atividade.data" name="data" disabled>
-          </mat-form-field>
+          <div *ngIf="novaImagem == false" class="imagemAnterior">
+            <img src="{{atividade.imagem}}">
+          </div>
+          <img [src]="urlImagem" >
+        <div class="subirImagem">
+        <input type="file" accept=".png, .jpg, .jpeg" (change)="carregarImagem($event)" id="inputFile" class="ninjaInput">
+        <label for="inputFile">
+        <p><mat-icon>file_upload</mat-icon></p>
+        </label>
+        <p>Clique para selecionar a imagem.</p>
+        </div>
       </form>
-  
-  
-  <button mat-raised-button (click) = "modificarAtividade()" color = "primary">
+
+
+      <button mat-raised-button (click) = "modificarAtividade()" color = "primary">
   Salvar alterações
   </button>
-  
+
   <button mat-raised-button (click) = "cancelar()" color = "accent">
-  Cancelar
+    Cancelar
   </button>
-  
-  </mat-card>
+
+</mat-card>
   </section>
+
+</div>

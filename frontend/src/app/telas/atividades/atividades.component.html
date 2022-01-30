@@ -26,41 +26,37 @@
     </div>
   </section>
 
-    <section *ngIf="materiaSelecionada != ''" class="conteudo">
-      <ul class="breadcrumb">
-        <li><a href="#">Início</a></li>
-        <li><a href="/atividades">Atividades</a></li>
-        <li><a routerLink="/atividades">{{materiaSelecionada}}</a></li>
-      </ul>
-      <h1> Atividades de {{materiaSelecionada}}</h1>
-    </section>
-    <div class="conteudo">
+        <section *ngIf="materiaSelecionada != ''" class="conteudo">
+          <ul class="breadcrumb">
+            <li><a href="#">Início</a></li>
+            <li><a href="/atividades">Atividades</a></li>
+            <li><a routerLink="/atividades">{{materiaSelecionada}}</a></li>
+          </ul>
 
-        <div *ngFor="let atividade of atividades">
-          <div *ngIf="atividade.materia == materiaSelecionada">
+
+          <h1> Atividades de {{materiaSelecionada}}</h1>
+          <div class="conteudo">
+            <div *ngFor="let atividade of atividades" >
             <a routerLink="/atividade/{{atividade.id}}">
-            <mat-card  class="atividades-cards" fxLayout="flex">
+              <mat-card  class="atividades-cards" fxLayout="flex">
                 <img mat-card-image src="{{atividade.imagem}}" alt="{{atividade.descricao}}">
                 <div>
-
                   <mat-card-header>
-                  <mat-card-title>
-                    <h1>{{atividade.titulo}}</h1>
-                  </mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>Materia: {{atividade.materia}}</p>
-                  <p>Série: {{atividade.serie}}</p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>Download</button>
-                </mat-card-actions>
-              </div>
+                    <mat-card-title>
+                      <h1>{{atividade.titulo}}</h1>
+                    </mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <p>Materia: {{atividade.materia}}</p>
+                    <p>Série: {{atividade.serie}}</p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-button>Download</button>
+                  </mat-card-actions>
+                </div>
               </mat-card>
             </a>
-      </div>
-    </div>
-    <section *ngIf="materiaSelecionada != ''">
+          </div>
 
-          <button mat-button (click)="reiniciarMateriaSelecionada()">Voltar à Seleção de Matérias</button>
-    </section>
+            <button mat-button (click)="reiniciarMateriaSelecionada()">Voltar à Seleção de Matérias</button>
+</div></section>

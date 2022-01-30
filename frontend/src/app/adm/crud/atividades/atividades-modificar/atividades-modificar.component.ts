@@ -16,18 +16,20 @@ export class AtividadesModificarComponent implements OnInit {
 
   materiaSelecionada : Categoria
 
-  serieSelecionada: Serie
-
   categorias: Categoria[]
-  
+
   series: Serie[]
 
- atividade: Atividade 
+  atividade: Atividade = null
+
+  urlImagem: any
+  imagens: any[]=[];
+  novaImagem: boolean = false
 
 
   constructor(
-    private atividadeService: AtividadeService, 
-    private router: Router, 
+    private atividadeService: AtividadeService,
+    private router: Router,
     private route: ActivatedRoute,
     private serieService: SerieService,
     private categoriaService: CategoriaService) { }
@@ -43,24 +45,34 @@ export class AtividadesModificarComponent implements OnInit {
     this.serieService.read().subscribe(series => {
       this.series = series
     })
-    
   }
 
   modificarAtividade(): void {
-    this.atividade.serie = this.serieSelecionada
-    this.atividade.materia = this.materiaSelecionada
+    this.atividade.imagem = this.urlImagem
     this.atividadeService.update(this.atividade).subscribe(() => {
       this.atividadeService.showMessage('Atividade atualizada com sucesso!')
       this.router.navigate(['adm-atividades']);
     })
-
   }
 
-  
   cancelar(): void {
     this.router.navigate(['adm-atividades']);
   }
-
+  carregarImagem(event:any){
+    let arquivos = event.target.files
+    let reader= new FileReader();
+    let nome="Spaco_educar"
+    reader.readAsDataURL(arquivos[0]);
+    reader.onloadend = ()=>{
+      console.log(reader.result);
+      this.imagens.push(reader.result);
+      this.atividadeService.subirImagem(nome+"_"+Date.now(), reader.result).then(urlImagem=>{
+        console.log(urlImagem);
+        this.urlImagem = urlImagem;
+        this.novaImagem = true
+      })
+    }
+}
 }
 
 

@@ -14,10 +14,10 @@ export class AtividadesComponent implements OnInit {
   categorias: Categoria[]
   atividades: Atividade[]
   materiaSelecionada:any = ''
+  atividade: Atividade
   totalLenght: any;
   page:number;
-  atividade: Atividade
-  atividadesArray:Object[]
+  atividadesArray:[]
 
   constructor(
     private atividadeService : AtividadeService,
@@ -28,7 +28,6 @@ export class AtividadesComponent implements OnInit {
       this.atividadeService.read().subscribe(atividades => {
         this.atividades = atividades
         this.totalLenght = atividades.length
-        console.log(atividades.length)
       }),
       this.categoriaService.read().subscribe(categorias => {
         this.categorias = categorias
@@ -36,16 +35,19 @@ export class AtividadesComponent implements OnInit {
     }
 
   selecionarMateria(categoria:any): void {
+    const arrayAtividades:Atividade[] = [];
     this.materiaSelecionada = categoria
-    for (let atividade of this.atividades){
-      if(this.materiaSelecionada.id == atividade.materia.id){
-        this.atividadesArray.push(atividade)
-        console.log(this.atividadesArray)
-      }
-
+      for (let atividade of this.atividades){
+        if (atividade.materia == this.materiaSelecionada){
+          arrayAtividades.push(atividade)
+          console.log(arrayAtividades)
+        }else{
+          console.log('outras')
+                }
+              }
     }
 
-   }
+
 
   reiniciarMateriaSelecionada(){
     this.materiaSelecionada = '';

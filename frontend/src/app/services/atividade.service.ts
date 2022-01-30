@@ -4,6 +4,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { EMPTY, Observable } from 'rxjs';
 import { Atividade } from '../models/atividade.model';
 import { map, catchError } from 'rxjs/operators';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/storage';
+import { environment } from 'src/environments/environment';
+
+firebase.initializeApp(environment.firebase);
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +18,22 @@ import { map, catchError } from 'rxjs/operators';
 export class AtividadeService {
 
   baseUrl = "http://localhost:3001/atividades"
- 
-  constructor(private snackBar: MatSnackBar, 
+  storageRef = firebase.app().storage().ref();
+
+  constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
-  
+
+    async subirImagem(nome:string,imgBase64:any){
+      try{
+        let resposta = await this.storageRef.child("users/"+nome).putString(imgBase64, 'data_url');
+        console.log(resposta);
+        return await resposta.ref.getDownloadURL();
+      }catch(err){
+        console.log(err);
+        return null;
+      }
+    }
+
   showMessage(msg: string, isError: boolean = false): void{
     this.snackBar.open(msg, 'x', {
       duration: 3000,
